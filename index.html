@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Quest - Sua Jornada Sustentável</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ESG QUEST</h1>
+            <p>Sua jornada rumo a um futuro sustentável</p>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-button active" onclick="openTab('perfil')">Perfil</button>
+            <button class="nav-button" onclick="openTab('capacitacao')">Capacitação</button>
+            <button class="nav-button" onclick="openTab('desafios')">Desafios</button>
+            <button class="nav-button" onclick="openTab('ranking')">Ranking</button>
+            <button class="nav-button logout" onclick="logout()">Logout</button>
+        </nav>
+
+        <!-- Conteúdo do Perfil (página inicial) -->
+        <div id="perfil" class="tab-content active">
+            <div class="user-profile">
+                <div class="avatar">J</div>
+                <div class="user-info">
+                    <h2>Boa Tarde, Jayme!</h2>
+                    <div class="level-container">
+                        <p>Nível: <span class="level-name">Sustentável Iniciante</!--span></p>
+                        <!--img src="images/nivel-iniciante.png" alt="Iniciante Verde" class="level-badge"-->
+                    </div>
+
+                    <!-- Ícones de progresso -->
+                    <div class="level-progress">
+                        <div class="shape-icon active" data-level="1">
+                            <div class="shape triangle"></div>
+                        </div>
+                        <div class="shape-icon" data-level="2">
+                            <div class="shape square"></div>
+                        </div>
+                        <div class="shape-icon" data-level="3">
+                            <div class="shape pentagon"></div>
+                        </div>
+                        <div class="shape-icon" data-level="4">
+                            <div class="shape hexagon"></div>
+                        </div>
+                        <div class="shape-icon" data-level="5">
+                            <div class="shape heptagon"></div>
+                        </div>
+                        <div class="shape-icon" data-level="6">
+                            <div class="shape octagon"></div>
+                        </div>
+                        <div class="shape-icon" data-level="7">
+                            <div class="shape circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage-container">
+                <h3>ETAPA</h3>
+                <div class="stage-nav">
+                    <div class="stage-tab active">Básica</div>
+                    <div class="stage-tab">Intermediária</div>
+                    <div class="stage-tab">Avançada</div>
+                    <div class="stage-tab">Mestre ESG</div>
+                </div>
+
+                <div class="stage-content">
+                    <h4>MINHA JORNADA</h4>
+                    <ul>
+                        <li>Redução de Pegada de Carbono</li>
+                        <li>Consumo Consciente</li>
+                        <li>Diversidade e Inclusão</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="welcome-message">
+                <h3>Bem-vindo(a) ao ESG Quest: Onde suas ações criam um mundo melhor!</h3>
+                <p>Complete desafios, ganhe pontos e veja o impacto real das suas escolhas sustentáveis</p>
+                <button class="primary-button" onclick="openTab('desafios')">Começar Jornada</button>
+            </div>
+
+            <div class="progress-container">
+                <h3>PROGRESSO DIÁRIO</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-time">
+                    <span>00:40:40</span>
+                    <span>00:01:00</span>
+                </div>
+                <p>Você completou <strong>4</strong> desafios hoje!</p>
+            </div>
+
+            <div class="achievements-container">
+                <h3>CONQUISTAS</h3>
+                <div class="badges-container">
+                    <div class="badge unlocked">
+                        <div class="badge-icon">🏛️</div>
+                        <p>Defensor da Governança</p>
+                    </div>
+                    <div class="badge unlocked">
+                        <div class="badge-icon">⚡</div>
+                        <p>Mago das Energias</p>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">🌫️</div>
+                        <p>Neutralizador de Carbono</p>
+                        <span class="badge-progress">2/5</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">🤝</div>
+                        <p>Craque do Comércio Justo</p>
+                        <span class="badge-progress">1/3</span>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-icon">🌿</div>
+                        <p>Guardião da Sustentabilidade</p>
+                        <span class="badge-progress">0/7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo de Desafios -->
+        <div id="desafios" class="tab-content">
+            <div class="task-container">
+                <h2>Desafio do Dia: Consumo Consciente</h2>
+                <p class="task-description">Assista ao vídeo e aprenda sobre redução de desperdício</p>
+
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JPdwEmghBUg?si=m_obkgQzubAWZr--" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Questionário sobre o vídeo -->
+                <div class="video-quiz">
+                    <h3>Teste seu conhecimento sobre o vídeo:</h3>
+
+                    <div class="quiz-question">
+                        <p>1. Qual é o principal fator de desperdício de alimentos mencionado no vídeo?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q1" value="a"> Armazenamento inadequado
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b"> Compra em excesso
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c"> Validade curta dos produtos
+                            </label>
+                        </div>
+                        <p class="quiz-feedback hidden" id="feedback-q1"></p>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. Segundo o vídeo, qual destas ações ajuda mais a reduzir o desperdício?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q2" value="a"> Congelar alimentos
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b"> Fazer lista de compras
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c"> Comprar embalagens maiores
+                            </label>
+                        </div>
+                        <p class="quiz-feedback hidden" id="feedback-q2"></p>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. Qual porcentagem de alimentos é desperdiçada globalmente, conforme o vídeo?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q3" value="a"> Cerca de 10%
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b"> Cerca de 33%
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c"> Cerca de 50%
+                            </label>
+                        </div>
+                        <p class="quiz-feedback hidden" id="feedback-q3"></p>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>4. O que o vídeo recomenda fazer com sobras de alimentos?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q4" value="a"> Descartar após 2 dias
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="b"> Criar novas receitas
+                            </label>
+                            <label>
+                                <input type="radio" name="q4" value="c"> Doar para animais
+                            </label>
+                        </div>
+                        <p class="quiz-feedback hidden" id="feedback-q4"></p>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>5. Qual destes NÃO é um benefício da redução do desperdício, segundo o vídeo?</p>
+                        <div class="quiz-options">
+                            <label>
+                                <input type="radio" name="q5" value="a"> Economia financeira
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="b"> Redução da fome mundial
+                            </label>
+                            <label>
+                                <input type="radio" name="q5" value="c"> Aumento da produção industrial
+                            </label>
+                        </div>
+                        <p class="quiz-feedback hidden" id="feedback-q5"></p>
+                    </div>
+
+                    <button class="quiz-submit" id="submitQuiz">Verificar Respostas</button>
+                    <div class="quiz-result hidden" id="quizResult"></div>
+                </div>
+
+                <div class="task-actions">
+                    <button class="primary-button" id="completeTask" onclick="completeTask()">Tarefa Cumprida!</button>
+                    <p class="task-reward">+50 pontos | +10 XP</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo de Ranking -->
+        <div id="ranking" class="tab-content">
+            <h2>Ranking de Sustentabilidade</h2>
+            <div class="ranking-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Nome</th>
+                            <th>Pontuação</th>
+                            <th>Conquistas</th>
+                            <th>Nível</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1º</td>
+                            <td>Daniel</td>
+                            <td>1,850</td>
+                            <td>12</td>
+                            <td>Mestre ESG</td>
+                        </tr>
+                        <tr>
+                            <td>2º</td>
+                            <td>Débora</td>
+                            <td>1,720</td>
+                            <td>10</td>
+                            <td>Avançado</td>
+                        </tr>
+                        <tr>
+                            <td>3º</td>
+                            <td>José</td>
+                            <td>1,650</td>
+                            <td>9</td>
+                            <td>Avançado</td>
+                        </tr>
+                        <tr>
+                            <td>4º</td>
+                            <td>Ester</td>
+                            <td>1,430</td>
+                            <td>8</td>
+                            <td>Avançado</td>
+                        </tr>
+                        <tr>
+                            <td>5º</td>
+                            <td>Noé</td>
+                            <td>1,210</td>
+                            <td>7</td>
+                            <td>Intermediário</td>
+                        </tr>
+                        <tr>
+                            <td>6º</td>
+                            <td>Rute</td>
+                            <td>980</td>
+                            <td>6</td>
+                            <td>Intermediário</td>
+                        </tr>
+                        <tr>
+                            <td>7º</td>
+                            <td>Jonas</td>
+                            <td>850</td>
+                            <td>5</td>
+                            <td>Intermediário</td>
+                        </tr>
+                        <tr>
+                            <td>8º</td>
+                            <td>Raabe</td>
+                            <td>720</td>
+                            <td>4</td>
+                            <td>Básico</td>
+                        </tr>
+                        <tr>
+                            <td>9º</td>
+                            <td>Abraão</td>
+                            <td>650</td>
+                            <td>3</td>
+                            <td>Básico</td>
+                        </tr>
+                        <!-- Linha do usuário atual -->
+                        <tr class="current-user">
+                            <td>15º</td>
+                            <td>Jayme</td>
+                            <td>420</td>
+                            <td>2</td>
+                            <td>Básico</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Conteúdo de Capacitação -->
+        <div id="capacitacao" class="tab-content">
+            <h2>Capacitação em ESG</h2>
+            <p class="section-description">Amplie seus conhecimentos, melhore seu currículo com esses certificados gratuitos:</p>
+
+            <div class="courses-container">
+                <div class="course-card">
+                    <h3>Caminhos para a Sustentabilidade: ESG e Políticas Públicas</h3>
+                    <p class="course-provider">Escola Virtual.GOV</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 20 horas</span>
+                        <span class="course-level">📊 Básico</span>
+                    </div>
+                    <a href="https://www.escolavirtual.gov.br/curso/1038" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>ASG na Gestão Pública: caminhos para a sustentabilidade</h3>
+                    <p class="course-provider">Escola Virtual.GOV</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 30 horas</span>
+                        <span class="course-level">📊 Intermediário</span>
+                    </div>
+                    <a href="https://www.escolavirtual.gov.br/curso/1353" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Políticas Públicas para o Saneamento Básico e o Desenvolvimento Sustentável</h3>
+                    <p class="course-provider">Escola Virtual.GOV</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 20 horas</span>
+                        <span class="course-level">📊 Básico</span>
+                    </div>
+                    <a href="https://www.escolavirtual.gov.br/curso/1354" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>ESG, O QUE TODO PROFISSIONAL DEVE SABER</h3>
+                    <p class="course-provider">INBS</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 8 horas</span>
+                        <span class="course-level">📊 Básico</span>
+                    </div>
+                    <a href="https://inbs.com.br/cursos/esg-o-que-todo-profissional-deve-saber/" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Mercado e Créditos de Carbono: Fundamentos, Atualidades e Perspectivas</h3>
+                    <p class="course-provider">INBS</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 8 horas</span>
+                        <span class="course-level">📊 Básico</span>
+                    </div>
+                    <a href="https://inbs.com.br/cursos/mercado-e-credito-de-carbono-gratuito/" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+                <div class="course-card">
+                    <h3>Licenciamento Ambiental, o que todo profissional deve saber</h3>
+                    <p class="course-provider">INBS</p>
+                    <div class="course-meta">
+                        <span class="course-duration">⏱️ 8 horas</span>
+                        <span class="course-level">📊 Básico</span>
+                    </div>
+                    <a href="https://inbs.com.br/cursos/curso-gratuito-de-licenciamento-ambiental/" target="_blank" class="course-button">Acessar Curso</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
